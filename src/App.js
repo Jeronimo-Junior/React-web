@@ -1,26 +1,19 @@
 import './App.css';
+import  Login from './screens/Login';
+import  Home from './screens/Home';
+import  SingUp from './screens/SingUp';
+
+import {
+  BrowserRouter as Router, Route, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div class="login-container">
-      <form class="login-form">
-        <h1>Login</h1>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter email" />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
-        </div>
-        <div class="button">
-        <button type="submit">Acessar</button>
-        </div>
-        <div class="button">
-        <button type="submit">Cadastre-se</button>
-        </div>
-      </form>
-    </div>
+    <Router>
+      <Routes>
+        <Route index element={<Login />}></Route>
+        <Route path='/Login' element={<Login2 />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
